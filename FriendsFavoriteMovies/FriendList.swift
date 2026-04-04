@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct FriendList: View {
+    @Query(sort: \Friend.name) private var friends: [Friend]
+
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,4 +18,5 @@ struct FriendList: View {
 
 #Preview {
     FriendList()
+        .modelContainer(for: Friend.self, inMemory: true)
 }
