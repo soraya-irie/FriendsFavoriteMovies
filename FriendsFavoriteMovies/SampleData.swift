@@ -9,5 +9,5 @@ import Foundation
 import SwiftData
 
 class SampleData {
-
+    let modelContainer: ModelContainer
 }
