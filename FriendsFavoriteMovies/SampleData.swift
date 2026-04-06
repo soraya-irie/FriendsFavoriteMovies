@@ -21,7 +21,7 @@ class SampleData {
         do {
             modelContainer = try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
-
+            fatalError("Could not create ModelContainer: \(error)")
         }
     }
 }
