@@ -16,7 +16,9 @@ struct MovieList: View {
         NavigationSplitView {
             List {
                 ForEach(movies) { movie in
-                    Text(movie.title)
+                    NavigationLink(movie.title) {
+                        Text("Detail view for \(movie.title)")
+                    }
                 }
             }
             .navigationTitle("Movies")
