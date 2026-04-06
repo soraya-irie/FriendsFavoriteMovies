@@ -16,5 +16,5 @@ struct FriendDetail: View {
 }
 
 #Preview {
-    FriendDetail()
+    FriendDetail(friend: SampleData.shared.friend)
 }
