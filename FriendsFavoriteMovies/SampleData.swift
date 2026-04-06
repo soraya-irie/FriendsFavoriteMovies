@@ -31,4 +31,8 @@ class SampleData {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }
+
+    private func insertSampleData() {
+
+    }
 }
