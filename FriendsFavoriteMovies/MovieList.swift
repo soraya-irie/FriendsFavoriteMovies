@@ -19,6 +19,7 @@ struct MovieList: View {
                     Text(movie.title)
                 }
             }
+            .navigationTitle("Movies")
         } detail: {
 
         }
