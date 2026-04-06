@@ -9,9 +9,11 @@ import Foundation
 import SwiftData
 
 class SampleData {
+    static let shared = SampleData()
+
     let modelContainer: ModelContainer
 
-    init() {
+    private init() {
         let schema = Schema([
             Friend.self,
             Movie.self,
