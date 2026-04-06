@@ -13,6 +13,8 @@ struct MovieDetail: View {
     var body: some View {
         Form {
             TextField("Movie title", text: $movie.title)
+
+            DatePicker("Release date", selection: $movie.releaseDate, displayedComponents: .date)
         }
     }
 }
