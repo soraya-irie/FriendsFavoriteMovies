@@ -13,12 +13,15 @@ struct FriendList: View {
     @Environment(\.modelContext) private var context
 
     var body: some View {
-        List {
-            ForEach(friends) { friend in
-                Text(friend.name)
+        NavigationSplitView {
+            List {
+                ForEach(friends) { friend in
+                    Text(friend.name)
+                }
             }
-        }
+        } detail: {
 
+        }
     }
 }
 
