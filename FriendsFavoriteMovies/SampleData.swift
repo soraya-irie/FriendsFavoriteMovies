@@ -13,6 +13,10 @@ class SampleData {
 
     let modelContainer: ModelContainer
 
+    var context: ModelContext {
+        modelContainer.mainContext
+    }
+
     private init() {
         let schema = Schema([
             Friend.self,
