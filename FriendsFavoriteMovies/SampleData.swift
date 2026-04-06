@@ -34,7 +34,7 @@ class SampleData {
 
     private func insertSampleData() {
         for friend in Friend.sampleData {
-
+            context.insert(friend)
         }
     }
 }
