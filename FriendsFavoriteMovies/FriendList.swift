@@ -16,7 +16,9 @@ struct FriendList: View {
         NavigationSplitView {
             List {
                 ForEach(friends) { friend in
-                    Text(friend.name)
+                    NavigationLink(friend.name) {
+                        Text("Detail view for \(friend.name)")
+                    }
                 }
             }
             .navigationTitle("Friends")
