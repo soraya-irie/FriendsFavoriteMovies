@@ -25,7 +25,9 @@ struct MovieList: View {
             }
             .navigationTitle("Movies")
         } detail: {
-
+            Text("Select a movie")
+                .navigationTitle("Movie")
+                .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
