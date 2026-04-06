@@ -25,7 +25,9 @@ struct FriendList: View {
             }
             .navigationTitle("Friends")
         } detail: {
-
+            Text("Select a friend")
+                .navigationTitle("Friend")
+                .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
