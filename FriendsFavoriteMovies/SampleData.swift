@@ -10,4 +10,8 @@ import SwiftData
 
 class SampleData {
     let modelContainer: ModelContainer
+
+    init() {
+
+    }
 }
