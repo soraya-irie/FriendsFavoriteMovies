@@ -18,6 +18,6 @@ class SampleData {
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)
 
-        modelContainer = ModelContainer(for: schema, configurations: [modelConfiguration])
+        modelContainer = try ModelContainer(for: schema, configurations: [modelConfiguration])
     }
 }
