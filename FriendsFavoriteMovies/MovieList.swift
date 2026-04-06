@@ -13,10 +13,14 @@ struct MovieList: View {
     @Environment(\.modelContext) private var context
 
     var body: some View {
-        List {
-            ForEach(movies) { movie in
-                Text(movie.title)
+        NavigationSplitView {
+            List {
+                ForEach(movies) { movie in
+                    Text(movie.title)
+                }
             }
+        } detail: {
+
         }
     }
 }
