@@ -15,6 +15,8 @@ struct FriendDetail: View {
             TextField("Name", text: $friend.name)
                 .autocorrectionDisabled()
         }
+        .navigationTitle("Friend")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
