@@ -17,5 +17,7 @@ class SampleData {
             Movie.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)
+
+        modelContainer = ModelContainer(for: schema, configurations: [modelConfiguration])
     }
 }
