@@ -12,6 +12,9 @@ class SampleData {
     let modelContainer: ModelContainer
 
     init() {
-
+        let schema = Schema([
+            Friend.self,
+            Movie.self,
+        ])
     }
 }
