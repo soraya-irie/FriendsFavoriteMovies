@@ -24,5 +24,5 @@ struct FriendList: View {
 
 #Preview {
     FriendList()
-        .modelContainer(for: Friend.self, inMemory: true)
+        .modelContainer(SampleData.shared.modelContainer)
 }
