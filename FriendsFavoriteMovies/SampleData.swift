@@ -16,5 +16,6 @@ class SampleData {
             Friend.self,
             Movie.self,
         ])
+        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)
     }
 }
