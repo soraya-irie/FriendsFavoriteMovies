@@ -19,6 +19,7 @@ struct FriendList: View {
                     Text(friend.name)
                 }
             }
+            .navigationTitle("Friends")
         } detail: {
 
         }
