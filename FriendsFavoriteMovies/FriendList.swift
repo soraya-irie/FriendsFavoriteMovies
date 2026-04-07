@@ -21,6 +21,7 @@ struct FriendList: View {
 
                     }
                 }
+                .onDelete(perform: deleteFriends(indexes:))
             }
             .navigationTitle("Friends")
             .toolbar {
