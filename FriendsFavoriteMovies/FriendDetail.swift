@@ -10,6 +10,7 @@ import SwiftData
 
 struct FriendDetail: View {
     @Bindable var friend: Friend
+    let isNew: Bool
 
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
