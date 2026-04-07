@@ -11,6 +11,7 @@ import SwiftData
 struct FriendList: View {
     @Query(sort: \Friend.name) private var friends: [Friend]
     @Environment(\.modelContext) private var context
+    @State private var newFriend: Friend?
 
     var body: some View {
         NavigationSplitView {
