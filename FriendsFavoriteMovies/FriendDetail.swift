@@ -25,6 +25,11 @@ struct FriendDetail: View {
                     dismiss()
                 }
             }
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Cancel") {
+                    dismiss()
+                }
+            }
         }
     }
 }
