@@ -29,6 +29,10 @@ struct FriendList: View {
                 .navigationBarTitleDisplayMode(.inline)
         }
     }
+
+    private func addFriend() {
+        context.insert(Friend(name: "New friend"))
+    }
 }
 
 #Preview {
