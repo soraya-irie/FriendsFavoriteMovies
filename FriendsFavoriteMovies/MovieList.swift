@@ -28,6 +28,10 @@ struct MovieList: View {
                 .navigationBarTitleDisplayMode(.inline)
         }
     }
+
+    private func addMovie() {
+        context.insert(Movie(title: "New Movie", releaseDate: .now))
+    }
 }
 
 #Preview {
