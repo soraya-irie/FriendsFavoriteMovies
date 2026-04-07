@@ -24,7 +24,9 @@ struct FriendList: View {
             }
             .navigationTitle("Friends")
             .toolbar {
+                ToolbarItem {
 
+                }
             }
         } detail: {
             Text("Select a friend")
