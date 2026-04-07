@@ -25,7 +25,7 @@ struct FriendDetail: View {
             TextField("Name", text: $friend.name)
                 .autocorrectionDisabled()
         }
-        .navigationTitle("Friend")
+        .navigationTitle(isNew ? "New Friend" : "Friend")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
