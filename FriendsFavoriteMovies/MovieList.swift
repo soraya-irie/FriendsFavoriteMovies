@@ -20,6 +20,7 @@ struct MovieList: View {
                         MovieDetail(movie: movie)
                     }
                 }
+                .onDelete(perform: deleteMovies(indexes:))
             }
             .navigationTitle("Movies")
             .toolbar {
