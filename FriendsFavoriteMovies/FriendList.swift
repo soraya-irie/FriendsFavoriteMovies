@@ -28,6 +28,9 @@ struct FriendList: View {
                 ToolbarItem {
                     Button("Add friend", systemImage: "plus", action: addFriend)
                 }
+                ToolbarItem(placement: .topBarTrailing) {
+                    EditButton()
+                }
             }
         } detail: {
             Text("Select a friend")
