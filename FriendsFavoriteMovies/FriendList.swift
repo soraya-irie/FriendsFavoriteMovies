@@ -41,7 +41,9 @@ struct FriendList: View {
     }
 
     private func addFriend() {
-        context.insert(Friend(name: "New friend"))
+        let newFriend = Friend(name: "")
+        context.insert(newFriend)
+        self.newFriend = newFriend
     }
 
     private func deleteFriends(indexes: IndexSet) {
