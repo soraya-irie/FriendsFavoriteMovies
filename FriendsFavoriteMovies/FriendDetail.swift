@@ -22,7 +22,7 @@ struct FriendDetail: View {
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 Button("save") {
-
+                    dismiss()
                 }
             }
         }
