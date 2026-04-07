@@ -10,6 +10,9 @@ import SwiftUI
 struct MovieDetail: View {
     @Bindable var movie: Movie
 
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var context
+
     var body: some View {
         Form {
             TextField("Movie title", text: $movie.title)
