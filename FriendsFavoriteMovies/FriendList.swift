@@ -34,7 +34,9 @@ struct FriendList: View {
                 }
             }
             .sheet(item: $newFriend) { friend in
-                FriendDetail(friend: friend)
+                NavigationStack {
+                    FriendDetail(friend: friend)
+                }
             }
         } detail: {
             Text("Select a friend")
