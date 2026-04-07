@@ -40,7 +40,9 @@ struct MovieList: View {
     }
 
     private func addMovie() {
-        context.insert(Movie(title: "New Movie", releaseDate: .now))
+        let newMovie = Movie(title: "", releaseDate: .now)
+        context.insert(newMovie)
+        self.newMovie = newMovie
     }
 
     private func deleteMovies(indexes: IndexSet) {
