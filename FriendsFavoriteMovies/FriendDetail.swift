@@ -17,6 +17,13 @@ struct FriendDetail: View {
         }
         .navigationTitle("Friend")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                Button("save") {
+
+                }
+            }
+        }
     }
 }
 
