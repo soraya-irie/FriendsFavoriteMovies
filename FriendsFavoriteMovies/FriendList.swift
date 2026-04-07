@@ -35,7 +35,7 @@ struct FriendList: View {
             }
             .sheet(item: $newFriend) { friend in
                 NavigationStack {
-                    FriendDetail(friend: friend)
+                    FriendDetail(friend: friend, isNew: true)
                 }
             }
         } detail: {
