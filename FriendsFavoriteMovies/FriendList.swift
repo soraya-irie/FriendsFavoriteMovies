@@ -25,7 +25,7 @@ struct FriendList: View {
             .navigationTitle("Friends")
             .toolbar {
                 ToolbarItem {
-
+                    Button("Add friend", systemImage: "plus", action: addFriend)
                 }
             }
         } detail: {
