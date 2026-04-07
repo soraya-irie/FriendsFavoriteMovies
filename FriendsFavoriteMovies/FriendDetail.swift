@@ -21,7 +21,7 @@ struct FriendDetail: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
-                Button("save") {
+                Button("Save") {
                     dismiss()
                 }
             }
