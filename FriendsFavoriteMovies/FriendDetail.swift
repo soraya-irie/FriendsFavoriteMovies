@@ -15,6 +15,11 @@ struct FriendDetail: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
 
+    init(friend: Friend, isNew: Bool = false) {
+        self.friend = friend
+        self.isNew = isNew
+    }
+
     var body: some View {
         Form {
             TextField("Name", text: $friend.name)
