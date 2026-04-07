@@ -27,6 +27,9 @@ struct MovieList: View {
                 ToolbarItem {
                     Button("Add movie", systemImage: "plus", action: addMovie)
                 }
+                ToolbarItem(placement: .topBarTrailing) {
+                    EditButton()
+                }
             }
         } detail: {
             Text("Select a movie")
