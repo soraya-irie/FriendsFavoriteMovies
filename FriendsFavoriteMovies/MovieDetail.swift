@@ -16,6 +16,8 @@ struct MovieDetail: View {
 
             DatePicker("Release date", selection: $movie.releaseDate, displayedComponents: .date)
         }
+        .navigationTitle("Movie")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
