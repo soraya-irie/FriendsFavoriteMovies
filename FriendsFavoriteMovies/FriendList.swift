@@ -23,6 +23,9 @@ struct FriendList: View {
                 }
             }
             .navigationTitle("Friends")
+            .toolbar {
+
+            }
         } detail: {
             Text("Select a friend")
                 .navigationTitle("Friend")
