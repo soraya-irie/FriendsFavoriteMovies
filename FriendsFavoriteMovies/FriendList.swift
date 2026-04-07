@@ -33,6 +33,9 @@ struct FriendList: View {
                     EditButton()
                 }
             }
+            .sheet(item: $newFriend) { friend in
+                FriendDetail(friend: friend)
+            }
         } detail: {
             Text("Select a friend")
                 .navigationTitle("Friend")
