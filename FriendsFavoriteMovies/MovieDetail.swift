@@ -27,6 +27,12 @@ struct MovieDetail: View {
                     dismiss()
                 }
             }
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Cancel") {
+                    context.delete(movie)
+                    dismiss()
+                }
+            }
         }
     }
 }
