@@ -48,3 +48,9 @@ struct FriendDetail: View {
         FriendDetail(friend: SampleData.shared.friend)
     }
 }
+
+#Preview("New Friend") {
+    NavigationStack {
+        FriendDetail(friend: SampleData.shared.friend, isNew: true)
+    }
+}
