@@ -32,6 +32,11 @@ struct MovieList: View {
                     EditButton()
                 }
             }
+            .sheet(item: $newMovie) { movie in
+                NavigationStack {
+                    MovieDetail(movie: movie)
+                }
+            }
         } detail: {
             Text("Select a movie")
                 .navigationTitle("Movie")
