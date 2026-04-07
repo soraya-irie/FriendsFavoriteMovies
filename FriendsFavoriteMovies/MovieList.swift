@@ -37,6 +37,12 @@ struct MovieList: View {
     private func addMovie() {
         context.insert(Movie(title: "New Movie", releaseDate: .now))
     }
+
+    private func deleteMovies(indexes: IndexSet) {
+        for index in indexes {
+            context.delete(movies[index])
+        }
+    }
 }
 
 #Preview {
