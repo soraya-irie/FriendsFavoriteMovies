@@ -28,15 +28,17 @@ struct FriendDetail: View {
         .navigationTitle(isNew ? "New Friend" : "Friend")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .confirmationAction) {
-                Button("Save") {
-                    dismiss()
+            if isNew {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") {
+                        dismiss()
+                    }
                 }
-            }
-            ToolbarItem(placement: .cancellationAction) {
-                Button("Cancel") {
-                    context.delete(friend)
-                    dismiss()
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") {
+                        context.delete(friend)
+                        dismiss()
+                    }
                 }
             }
         }
