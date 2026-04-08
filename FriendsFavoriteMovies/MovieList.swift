@@ -13,6 +13,10 @@ struct MovieList: View {
     @Environment(\.modelContext) private var context
     @State private var newMovie: Movie?
 
+    init(titleFilter: String = "") {
+
+    }
+
     var body: some View {
         NavigationSplitView {
             List {
