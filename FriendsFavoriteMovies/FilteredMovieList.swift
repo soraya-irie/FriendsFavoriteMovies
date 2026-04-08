@@ -14,6 +14,7 @@ struct FilteredMovieList: View {
     var body: some View {
         NavigationSplitView {
             MovieList(titleFilter: searchText)
+                .searchable(text: $searchText)
         } detail: {
             Text("Select a movie")
                 .navigationTitle("Movie")
