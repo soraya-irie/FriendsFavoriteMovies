@@ -10,7 +10,13 @@ import SwiftData
 
 struct FilteredMovieList: View {
     var body: some View {
-        MovieList()
+        NavigationSplitView {
+            MovieList()
+        } detail: {
+            Text("Select a movie")
+                .navigationTitle("Movie")
+                .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
