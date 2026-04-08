@@ -15,7 +15,7 @@ struct MovieList: View {
 
     init(titleFilter: String = "") {
         let predicate = #Predicate<Movie> { movie in
-            true
+            titleFilter.isEmpty || movie.title.localizedStandardContains(titleFilter)
         }
 
         _movies = Query(filter: predicate, sort: \Movie.title)
