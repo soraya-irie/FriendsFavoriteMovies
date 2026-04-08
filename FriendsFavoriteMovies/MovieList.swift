@@ -14,7 +14,9 @@ struct MovieList: View {
     @State private var newMovie: Movie?
 
     init(titleFilter: String = "") {
-
+        let predicate = #Predicate<Movie> { movie in
+            true
+        }
     }
 
     var body: some View {
