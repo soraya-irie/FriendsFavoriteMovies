@@ -10,9 +10,15 @@ import SwiftData
 
 struct MovieDetail: View {
     @Bindable var movie: Movie
+    let isNew: Bool
 
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
+
+    init(movie: Movie, isNew: Bool = false) {
+        self.movie = movie
+        self.isNew = isNew
+    }
 
     var body: some View {
         Form {
