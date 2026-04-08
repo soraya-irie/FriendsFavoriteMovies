@@ -37,6 +37,7 @@ struct FriendList: View {
                 NavigationStack {
                     FriendDetail(friend: friend, isNew: true)
                 }
+                .interactiveDismissDisabled()
             }
         } detail: {
             Text("Select a friend")
