@@ -25,6 +25,12 @@ struct MovieDetail: View {
             TextField("Movie title", text: $movie.title)
 
             DatePicker("Release date", selection: $movie.releaseDate, displayedComponents: .date)
+
+            Section("Favorited by") {
+                ForEach(movie.favoritedBy) { friend in
+                    Text(friend.name)
+                }
+            }
         }
         .navigationTitle(isNew ? "New Movie" : "Movie")
         .navigationBarTitleDisplayMode(.inline)
