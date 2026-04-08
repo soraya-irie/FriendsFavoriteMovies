@@ -69,3 +69,8 @@ struct FriendList: View {
     FriendList()
         .modelContainer(SampleData.shared.modelContainer)
 }
+
+#Preview("Empty List") {
+    FriendList()
+        .modelContainer(for: Friend.self, inMemory: true)
+}
