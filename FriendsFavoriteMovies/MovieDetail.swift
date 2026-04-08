@@ -32,7 +32,7 @@ struct MovieDetail: View {
 
             if !movie.favoritedBy.isEmpty {
                 Section("Favorited by") {
-                    ForEach(movie.favoritedBy) { friend in
+                    ForEach(sortedFriends) { friend in
                         Text(friend.name)
                     }
                 }
