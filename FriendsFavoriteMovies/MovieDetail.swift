@@ -49,3 +49,9 @@ struct MovieDetail: View {
         MovieDetail(movie: SampleData.shared.movie)
     }
 }
+
+#Preview("New Movie") {
+    NavigationStack {
+        MovieDetail(movie: SampleData.shared.movie, isNew: true)
+    }
+}
