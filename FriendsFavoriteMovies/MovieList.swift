@@ -17,6 +17,8 @@ struct MovieList: View {
         let predicate = #Predicate<Movie> { movie in
             true
         }
+
+        _movies = Query(filter: predicate, sort: \Movie.title)
     }
 
     var body: some View {
