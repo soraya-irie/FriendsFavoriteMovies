@@ -28,7 +28,9 @@ struct FriendDetail: View {
                 .autocorrectionDisabled()
 
             Picker("Favorite Movie", selection: $friend.favoriteMovie) {
-
+                ForEach(movies) { movie in
+                    Text(movie.title)
+                }
             }
         }
         .navigationTitle(isNew ? "New Friend" : "Friend")
