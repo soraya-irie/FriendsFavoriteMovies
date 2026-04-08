@@ -15,14 +15,16 @@ struct FriendList: View {
 
     var body: some View {
         NavigationSplitView {
-            List {
-                ForEach(friends) { friend in
-                    NavigationLink(friend.name) {
-                        FriendDetail(friend: friend)
+            if !friends.isEmpty {
+                List {
+                    ForEach(friends) { friend in
+                        NavigationLink(friend.name) {
+                            FriendDetail(friend: friend)
 
+                        }
                     }
+                    .onDelete(perform: deleteFriends(indexes:))
                 }
-                .onDelete(perform: deleteFriends(indexes:))
             }
             .navigationTitle("Friends")
             .toolbar {
