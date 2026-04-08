@@ -26,7 +26,7 @@ struct MovieDetail: View {
 
             DatePicker("Release date", selection: $movie.releaseDate, displayedComponents: .date)
         }
-        .navigationTitle("Movie")
+        .navigationTitle(isNew ? "New Movie" : "Movie")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
