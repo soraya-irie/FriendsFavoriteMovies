@@ -28,6 +28,9 @@ struct FriendDetail: View {
                 .autocorrectionDisabled()
 
             Picker("Favorite Movie", selection: $friend.favoriteMovie) {
+                Text("None")
+                    .tag(nil as Movie?)
+
                 ForEach(movies) { movie in
                     Text(movie.title)
                         .tag(movie)
