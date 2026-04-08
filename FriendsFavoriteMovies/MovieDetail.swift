@@ -26,9 +26,11 @@ struct MovieDetail: View {
 
             DatePicker("Release date", selection: $movie.releaseDate, displayedComponents: .date)
 
-            Section("Favorited by") {
-                ForEach(movie.favoritedBy) { friend in
-                    Text(friend.name)
+            if !movie.favoritedBy.isEmpty {
+                Section("Favorited by") {
+                    ForEach(movie.favoritedBy) { friend in
+                        Text(friend.name)
+                    }
                 }
             }
         }
