@@ -29,15 +29,17 @@ struct MovieDetail: View {
         .navigationTitle(isNew ? "New Movie" : "Movie")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .confirmationAction) {
-                Button("Save") {
-                    dismiss()
+            if isNew {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") {
+                        dismiss()
+                    }
                 }
-            }
-            ToolbarItem(placement: .cancellationAction) {
-                Button("Cancel") {
-                    context.delete(movie)
-                    dismiss()
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") {
+                        context.delete(movie)
+                        dismiss()
+                    }
                 }
             }
         }
