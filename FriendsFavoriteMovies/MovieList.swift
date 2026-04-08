@@ -70,3 +70,8 @@ struct MovieList: View {
     MovieList()
         .modelContainer(SampleData.shared.modelContainer)
 }
+
+#Preview("Filtered") {
+    MovieList(titleFilter: "tr")
+        .modelContainer(SampleData.shared.modelContainer)
+}
