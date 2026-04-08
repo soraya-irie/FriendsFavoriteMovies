@@ -15,6 +15,8 @@ struct FriendDetail: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
 
+    @Query(sort: \Movie.title) private var movies: [Movie]
+
     init(friend: Friend, isNew: Bool = false) {
         self.friend = friend
         self.isNew = isNew
