@@ -26,6 +26,8 @@ struct FriendList: View {
                         }
                         .onDelete(perform: deleteFriends(indexes:))
                     }
+                } else {
+                    ContentUnavailableView("Add Friends", systemImage: "person.and.person")
                 }
             }
             .navigationTitle("Friends")
