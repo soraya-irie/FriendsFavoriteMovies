@@ -80,3 +80,10 @@ struct MovieList: View {
             .modelContainer(SampleData.shared.modelContainer)
     }
 }
+
+#Preview("Empty List") {
+    NavigationStack {
+        MovieList()
+            .modelContainer(for: Movie.self, inMemory: true)
+    }
+}
