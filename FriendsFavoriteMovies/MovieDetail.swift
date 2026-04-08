@@ -21,8 +21,8 @@ struct MovieDetail: View {
     }
 
     var sortedFriends: [Friend] {
-        movie.favoritedBy.sorted { Friend, Friend in
-            code
+        movie.favoritedBy.sorted { first, second in
+            first.name < second.name
         }
     }
 
